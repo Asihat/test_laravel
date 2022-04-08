@@ -14,7 +14,6 @@ class CreatePostsTable extends Migration
     public function up()
     {
         //TODO Migrations Задание 1: Создать таблицу categories с 2 полями id и title (не забыть про timestamps)
-        //
 
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
@@ -31,11 +30,8 @@ class CreatePostsTable extends Migration
             $table->timestamps();
 
             //TODO Migrations Задание 2: Для title указать что значение по умолчанию NULL
-
             //TODO Migrations Задание 3: Для active указать что значение по умолчанию TRUE
-
             //TODO Migrations Задание 4: Добавить функционал soft delete
-
             //TODO Migrations Задание 5: Добавить поля с timestamps (created_at, updated_at) через 1 метод
         });
 

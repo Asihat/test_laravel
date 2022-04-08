@@ -36,11 +36,14 @@ Route::get('/users/bind/{user}', [UserController::class, 'showBind']);
 
 //TODO Route Задание 6: Выполнить редирект с урла /bad на урл /good
 // Одна строка кода
+
 Route::redirect('/bad', '/good');
+
 
 
 //TODO Route Задание 7: Добавить роут на ресурс контроллер - UserCrudController с урлом - /users_crud
 // Одна строка кода
+
 Route::resource('/users_crud', UserCrudController::class);
 
 
@@ -55,7 +58,9 @@ Route::prefix('dashboard')->group(function() {
     Route::post('/admin/post', [AdminIndexController::class, 'post']);
 
 });
+
 //TODO Route Задание 11: Организовать группу роутов (Route::group()) объединенных префиксом - security и мидлваром auth
+
 Route::prefix('security')->middleware('auth')->group(function() {
 
     // Задачи внутри группы роутов security

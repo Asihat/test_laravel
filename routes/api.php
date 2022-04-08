@@ -13,6 +13,7 @@ Route::group(['middleware' => 'auth:sanctum'], function() {
     // Префикс урла должен быть /api/v1
     // Полный урл /api/v1/users (не забывайте что это api routes)
     // Одна строка кода
+    
     Route::group(['prefix' => 'v1'], function() {
         Route::apiResource('users', UserController::class);
     });
